@@ -692,7 +692,7 @@ require('lazy').setup({
                 callSnippet = 'Replace',
               },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
+              diagnostics = { disable = { 'missing-fields' } },
             },
           },
         },
@@ -1028,6 +1028,15 @@ require('lazy').setup({
     },
   },
 })
+
+-- Love2d
+Lua = {
+  workspace = {
+    library = {
+      '~/.local/share/LuaAddons/love2d/library',
+    },
+  },
+}
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
