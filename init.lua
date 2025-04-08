@@ -194,6 +194,12 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
+-- NOTE: Some terminals have coliding keymaps or are not able to send distinct keycodes
+-- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
+-- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
+-- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
+-- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -676,7 +682,10 @@ require("lazy").setup({
         ts_ls = {},
         --
         pyright = {},
+<<<<<<< HEAD
         -- java_language_server = {},
+=======
+>>>>>>> nvim-lua-master
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -687,11 +696,19 @@ require("lazy").setup({
                 callSnippet = "Replace",
               },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+<<<<<<< HEAD
               diagnostics = { disable = { "missing-fields" } },
               -- Love2d
               workspace = {
                 library = {
                   "~/.local/share/LuaAddons/love2d/library",
+=======
+              diagnostics = { disable = { 'missing-fields' } },
+              -- Love2d
+              workspace = {
+                library = {
+                  '~/.local/share/LuaAddons/love2d/library',
+>>>>>>> nvim-lua-master
                 },
               },
             },
@@ -761,7 +778,11 @@ require("lazy").setup({
         else
           return {
             timeout_ms = 500,
+<<<<<<< HEAD
             lsp_format = lsp_format_opt,
+=======
+            lsp_format = 'fallback',
+>>>>>>> nvim-lua-master
           }
         end
       end,
@@ -992,10 +1013,17 @@ require("lazy").setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
+<<<<<<< HEAD
   require "kickstart.plugins.indent_line",
   -- require 'kickstart.plugins.lint',
   require "kickstart.plugins.autopairs",
   require "kickstart.plugins.neo-tree",
+=======
+  require 'kickstart.plugins.indent_line',
+  -- require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
+>>>>>>> nvim-lua-master
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
